@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+import router from '@/router'
 export default {
   data() {
     let validateUsername = (rule, value, callback) => {
@@ -67,8 +68,8 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          alert('submit!')
           // 发送登录 请求
+          if (this.ruleForm.username == 'ck' && this.ruleForm.password == '132') this.$router.push('/home')
         } else {
           return false
         }
