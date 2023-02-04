@@ -29,7 +29,8 @@
   </div>
 </template>
 <script>
-import router from '@/router'
+import actions_type from '@/store/type/action-type'
+const { LOGIN_ACTION } = actions_type
 export default {
   data() {
     let validateUsername = (rule, value, callback) => {
@@ -66,10 +67,13 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
+      this.$refs[formName].validate(async (valid) => {
         if (valid) {
           // 发送登录 请求
-          if (this.ruleForm.username == 'ck' && this.ruleForm.password == '132') this.$router.push('/home')
+          const param = { username: this.ruleForm.username, password: this.ruleForm.password }
+          await this.$store.dispatch(LOGIN_ACTION, param)
+          this.$router.push('/layout')
+          document.body.style.background = '#fff'
         } else {
           return false
         }

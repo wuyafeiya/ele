@@ -1,9 +1,13 @@
 <template>
-  <div>home</div>
+  <div id="layout">123</div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style></style>
+<style>
+[v-clock] {
+  display: none;
+}
+</style>
