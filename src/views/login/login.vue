@@ -24,12 +24,14 @@
             <el-button class="login_in" @click="submitForm('ruleForm')">登录</el-button>
           </el-form-item>
         </el-form>
+        <el-button @click="controller">取消</el-button>
       </div>
     </div>
   </div>
 </template>
 <script>
 import actions_type from '@/store/type/action-type'
+import { controller } from '@/api/user'
 const { LOGIN_ACTION } = actions_type
 export default {
   data() {
@@ -109,81 +111,6 @@ body {
   .el-icon-open:before {
     font-size: 30px;
     color: #bd34fe;
-  }
-}
-#login {
-  display: flex;
-  width: 800px;
-  height: 600px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  .login_left,
-  .login_right {
-    display: flex;
-    width: 50%;
-  }
-  .login_left {
-    .imgage-bg {
-      width: 400px;
-      height: 400px;
-      position: absolute;
-      top: 12%;
-      left: 3%;
-      border-radius: 50%;
-      background-image: $image-background-image;
-      filter: $image-filter;
-    }
-    .login_logo {
-      margin-top: 50%;
-      transform: translate(0, -25%);
-      max-width: 100%;
-    }
-  }
-  .login_right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .login_name {
-      text-align: center;
-      margin-bottom: 50px;
-      .login_clip {
-        background: $name-background;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: $name-color;
-      }
-    }
-    .el-form {
-      margin-bottom: 100px;
-    }
-    .login_in {
-      width: 280px;
-      color: $White;
-      margin-top: 50px;
-      background: $btn-background;
-      border: none;
-    }
-    .el-form-item {
-      margin-bottom: 30px;
-    }
-    .el-input {
-      width: 280px;
-      .el-input__inner {
-        color: $White;
-        caret-color: #bd34fe;
-      }
-    }
-    .el-input > input[type='text'],
-    input[type='password'] {
-      border: none;
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid #41d1ff;
-    }
   }
 }
 </style>

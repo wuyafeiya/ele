@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import { getToken } from "@/utils/auth"
 Vue.use(VueRouter);
 
-const routes = [
+export const constantRoutes = [
   {
     path: "/",
     redirect: '/layout'
@@ -20,24 +20,15 @@ const routes = [
   }
 ];
 
+export const asyncRoutes = [
+  {
+
+  }
+]
 const router = new VueRouter({
   mode: "hash",
-  routes,
+  scrollBehavior: () => ({ y: 0 }),
+  routes: constantRoutes
 });
-
-router.beforeEach((to, from, next) => {
-  const token = getToken('Admin-Token')
-  if (to.path == '/login') {
-    next()
-  } else {
-    if (token) {
-      next()
-    } else {
-      next('/login')
-    }
-  }
-  next()
-})
-
 
 export default router;
