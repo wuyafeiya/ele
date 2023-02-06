@@ -12,5 +12,4 @@ const actions = {
       commit(LOGIN_MUTATION, token)
   }
 }
-
 export default actions
