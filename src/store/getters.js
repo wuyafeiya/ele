@@ -3,6 +3,7 @@ const getters = {
   roles: state => state.user.roles,
   ck: "123",
   name: '123',
+  123: '123',
 }
 
 export default getters
