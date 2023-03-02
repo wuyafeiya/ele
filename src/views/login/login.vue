@@ -15,7 +15,7 @@
             <el-input type="text" v-model="ruleForm.username" autocomplete="off" placeholder="请输入用户名"></el-input>
           </el-form-item>
           <el-form-item prop="password" label-width="50px">
-            <el-input type="password" v-model="ruleForm.password" autocomplete="off" placeholder="请输入密码"></el-input>
+            <el-input v-focus type="password" v-model="ruleForm.password" autocomplete="off" placeholder="请输入密码"></el-input>
           </el-form-item>
           <!-- <el-form-item>
           <el-checkbox v-model="checked">记住我</el-checkbox>
@@ -24,14 +24,12 @@
             <el-button class="login_in" @click="submitForm('ruleForm')">登录</el-button>
           </el-form-item>
         </el-form>
-        <el-button @click="controller">取消</el-button>
       </div>
     </div>
   </div>
 </template>
 <script>
 import actions_type from '@/store/type/action-type'
-import { controller } from '@/api/user'
 const { LOGIN_ACTION } = actions_type
 export default {
   data() {
@@ -56,15 +54,15 @@ export default {
       ruleForm: {
         username: '',
         password: '',
-        color: 'red',
+        color: 'red'
         // checked: true,s
       },
       flag: false,
       color: 'el-icon-turn-off',
       rules: {
         username: [{ validator: validateUsername, trigger: 'blur' }],
-        password: [{ validator: validatePassword, trigger: 'blur' }],
-      },
+        password: [{ validator: validatePassword, trigger: 'blur' }]
+      }
     }
   },
   methods: {
@@ -74,7 +72,7 @@ export default {
           // 发送登录 请求
           const param = { username: this.ruleForm.username, password: this.ruleForm.password }
           await this.$store.dispatch(LOGIN_ACTION, param)
-          this.$router.push('/layout')
+          this.$router.push({ path: '/' }).catch((err) => err)
           document.body.style.background = '#fff'
         } else {
           return false
@@ -91,8 +89,8 @@ export default {
         document.body.style.backgroundColor = '#000'
         this.color = 'el-icon-turn-off'
       }
-    },
-  },
+    }
+  }
 }
 </script>
 

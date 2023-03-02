@@ -1,6 +1,5 @@
 import router  from "./router";
 import store from "./store";
-import { message } from '@/components/Message'
 import NProgress from "nprogress";
 import 'nprogress/nprogress.css'
 import { getToken } from "./utils/auth";
@@ -16,15 +15,18 @@ router.beforeEach(async (to, from, next) => {
       next({ path: '/' })
       NProgress.done()
     } else {
-      const hasRoles = store.getters.rolse && store.getters.roles.length > 0
-
+      const hasRoles = store.getters.roles && store.getters.roles.length > 0
       if (hasRoles) {
         next()
+        NProgress.done()
       } else {
         try {
           const { roles } = await store.dispatch('user/GET_INFO')
-          next({ ...to })
+          const accessedRoutes = await store.dispatch('permission/generateRoutes', roles)
+          router.addRoute(...accessedRoutes)
+          next({...to,replace:true})
         } catch (err) {
+          console.log(err)
         }
       }
     }

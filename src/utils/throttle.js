@@ -1,7 +1,6 @@
 /**
  * 节流
  */
-
 const throttle = (fn,wait=50) => {
   let previous = 0
   return function (...args) {

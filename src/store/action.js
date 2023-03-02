@@ -8,8 +8,9 @@ const { LOGIN_ACTION } = actions_type
 const actions = {
   [LOGIN_ACTION]: async ({ commit }, data) => {
     const { data: { token } } = await login(data)
-      setToken(token)
-      commit(LOGIN_MUTATION, token)
+    setToken(token)
+    commit(LOGIN_MUTATION, token)
   }
 }
+
 export default actions

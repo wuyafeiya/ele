@@ -6,7 +6,7 @@ import instance from "@/utils/request";
  */
 export const controller = new AbortController();
 
-export const login = data => instance({ url: "/login", method: 'post', data, signal: controller.signal})
+export const login = data => instance({ url: "/login", method: 'post', data, signal: controller.signal })
 
 /**s
  * 用户信息
