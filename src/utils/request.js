@@ -3,7 +3,7 @@ import store from "@/store";
 import { getToken } from "./auth";
 const instance = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
-  timeout: 1000,
+  timeout: 2000,
 });
 
 // 添加请求拦截器

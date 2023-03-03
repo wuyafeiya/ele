@@ -13,12 +13,14 @@ $panGreen: #30B08F;
 $menuText:#bfcbd9;
 $menuActiveText:#409EFF;
 $subMenuActiveText:#f4f4f5; // https://github.com/ElemeFE/element/issues/12951
-$menuBg:#304156;
+$menuBg:#161717;
 $menuHover:#263445;
 $subMenuBg:#1f2d3d;
 $subMenuHover:#001528;
 $sideBarWidth: 210px;
 
+// 主页面
+$mainBg:#242424;
 // 导出变量
 :export {
   menuText: $menuText;
@@ -29,4 +31,5 @@ $sideBarWidth: 210px;
   subMenuBg: $subMenuBg;
   subMenuHover: $subMenuHover;
   sideBarWidth: $sideBarWidth;
+  mainBg:$mainBg
 }

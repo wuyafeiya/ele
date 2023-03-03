@@ -2,20 +2,24 @@
   <div :class="classObj" class="app-wrapper">
     <Sidebar class="sidebar-container"></Sidebar>
     <div class="main-container">
-      <Nav></Nav>
-      <tags-view></tags-view>
+      <div>
+        <Nav></Nav>
+        <tags-view></tags-view>
+      </div>
+      <app-main />
     </div>
   </div>
 </template>
 <script>
 import { mapState } from 'vuex'
-import { Sidebar, Nav, TagsView } from './components'
+import { Sidebar, Nav, TagsView, AppMain } from './components'
 export default {
   name: 'layout',
   components: {
     Sidebar,
     Nav,
-    TagsView
+    TagsView,
+    AppMain
   },
   computed: {
     ...mapState({

@@ -9,7 +9,6 @@
     </template>
   </div>
 </template>
-
 <script>
 import path from 'path'
 import AppLink from './link.vue'

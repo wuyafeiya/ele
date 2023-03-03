@@ -1,0 +1,50 @@
+ .el-calendar {
+  background: transparent;
+}
+.el-calendar .el-calendar__body .el-calendar-day {
+  height: auto;
+  font-size: 12px;
+  text-align: center;
+  padding: 4px;
+}
+ .el-calendar-table .el-calendar-day:hover,
+ .el-calendar-table td.is-selected
+ {
+  background-color: #fcdf78;
+  color: #000;
+  border-radius: 32px;
+}
+ .el-calendar .el-calendar-table thead th {
+  font-size: 12px;
+  padding: 10px 0;
+  padding: 4px 0;
+}
+ .el-calendar-table__row td {
+  border-radius: 32px;
+}
+ .el-calendar__body {
+  padding: 0;
+}
+ .el-calendar-table tr td:first-child {
+  border-left: none;
+}
+ .el-calendar-table tr:first-child td {
+  border-top: none;
+}
+ .el-calendar-table td {
+  border-bottom: none;
+  border-right: none;
+}
+.el-calendar-table:not(.is-range) td.prev ,.el-calendar-table:not(.is-range) td.next {
+  color: #525252;
+}
+.el-calendar-table__row  td.prev,
+ td.next {
+  color: #525252;
+}
+ td.current {
+  color: #fff;
+}
+.el-calendar .el-calendar__header {
+  display: none !important;
+}
