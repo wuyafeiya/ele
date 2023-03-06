@@ -2,20 +2,21 @@
   <div class="Calendar">
     <div class="" style="font-size: 16px; font-weight: 700; color: #fff">Calendar</div>
     <div id="view">
-      <buttons :icon="icon">Feb 2023<i class="el-icon-arrow-down el-icon--right"></i></buttons>
-      <a style="color: #fff; line-height: 60px">view</a>
+      <buttons :icon="icon"><span>Feb 2023</span><i class="el-icon-arrow-down el-icon--right"></i></buttons>
+      <a style="color: #fff; line-height: 60px; text-decoration: underline">view</a>
     </div>
     <el-calendar v-model="value"></el-calendar>
   </div>
 </template>
 <script>
+import mixin from './mixins/index'
 import Buttons from '../Sales/Buttons/Buttons.vue'
 export default {
   components: { Buttons },
+  mixins: [mixin],
   data() {
     return {
-      value: new Date(),
-      icon: 'el-icon-date'
+      value: new Date()
     }
   }
 }
@@ -33,6 +34,7 @@ export default {
   #view {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 </style>

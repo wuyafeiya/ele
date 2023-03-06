@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button :icon="icon" class="B">
+    <el-button :icon="icon" class="B" :style="{ backgroundColor: Color }">
       <slot></slot>
     </el-button>
   </div>
@@ -12,6 +12,11 @@ export default {
   props: {
     icon: {
       type: String
+    },
+    Color: {
+      type: String,
+      default: 'transparent',
+      require: true
     }
   }
 }
@@ -21,7 +26,6 @@ export default {
 .B {
   border-radius: 8px;
   border: 1px solid #525252;
-  background-color: transparent;
   width: 121px;
   color: #fff;
   margin-bottom: 10px;

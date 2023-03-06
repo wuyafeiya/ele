@@ -3,7 +3,7 @@
     <div class="B-l">
       <span>{{ BalanceInfo.title }}</span>
       <span>{{ BalanceInfo.money }}</span>
-      <span>View entire list</span>
+      <span style="text-decoration: underline">View entire list</span>
     </div>
     <div class="B-r"><img :src="require(`@/image/${BalanceInfo.img}`)" :class="BalanceInfo.class" /></div>
   </div>

@@ -5,16 +5,22 @@
       <div class="dash-Balance">
         <balance v-for="(item, index) in BalanceInfo" :BalanceInfo="item" :key="index"></balance>
       </div>
-      <Sales></Sales>
-      <calendar></calendar>
+      <div class="dash-Sales">
+        <Sales></Sales>
+        <calendar></calendar>
+      </div>
+      <div class="dash-Weekly">
+        <weekly></weekly>
+        <customer></customer>
+      </div>
     </div>
     <div class="dash-m-r"></div>
   </div>
 </template>
 <script>
-import { Sales, Calendar, Balance } from './components'
+import { Sales, Calendar, Balance, Weekly, Customer } from './components'
 export default {
-  components: { Balance, Sales, Calendar },
+  components: { Balance, Sales, Calendar, Weekly, Customer },
   data() {
     return {
       BalanceInfo: [
@@ -48,6 +54,8 @@ export default {
 <style lang="scss" scoped>
 .dash-m {
   display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
   padding: 20px;
   .title {
     font-size: 48px;
@@ -59,8 +67,21 @@ export default {
     width: 930px;
     justify-content: space-between;
   }
+  .dash-Sales {
+    margin-bottom: 23px;
+  }
+  .dash-Weekly {
+    display: flex;
+    justify-content: space-between;
+  }
   .dash-calendar {
     margin-left: 630px;
+  }
+  .dash-m-r {
+    width: 307px;
+    height: 808px;
+    background: #161717;
+    border-radius: 32px;
   }
 }
 </style>
