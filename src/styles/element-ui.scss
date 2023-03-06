@@ -48,3 +48,40 @@
 .el-calendar .el-calendar__header {
   display: none !important;
 }
+
+// 表格去除背景色
+.el-table{
+  color: #fff;
+}
+.el-table .el-table__cell {
+  padding: 8px 0;
+}
+
+.el-table, .el-table__expanded-cell{
+  background-color: transparent;
+}
+.el-table th,
+.el-table tr,
+.el-table td {
+    background-color: transparent;
+}
+.el-table td.el-table__cell{
+  background-color: transparent;
+}
+
+.el-table th.el-table__cell{
+  background-color: transparent;
+}
+.el-table td.el-table__cell,.el-table th.el-table__cell.is-leaf{
+  border-bottom: 1px solid #3f3f3f;
+}
+.el-table::before{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell{
+  background: #73FFCC;
+  color: #000;
+}
