@@ -12,15 +12,15 @@ const componentsRouter = {
   children: [
     {
       path: 'audio',
-      component: () => import('@/components/audioDance/index.vue'),
+      component: () => import('@/views/VideoDance'),
       name: 'AudioDemo',
       meta: { title: 'Audio' }
     },
     {
-        path: 'audio1',
-        component: () => import('@/views/Vue/index.vue'),
-        name: 'VueDemo',
-        meta: { title: 'Vue' }
+        path: 'loading',
+        component: () => import('@/views/components-demo/loading.vue'),
+        name: 'LoadingDemo',
+        meta: { title: 'Loading' }
     }
   ]
 }

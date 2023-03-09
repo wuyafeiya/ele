@@ -1,7 +1,7 @@
 <template>
   <div>
     <canvas></canvas>
-    <audio id="audio" :src="require(`@/video/安和桥.mp3`)" controls></audio>
+    <audio id="audio" :src="require(`@/video/安和桥.mp3`)" controls style="margin: 0 auto; display: block"></audio>
   </div>
 </template>
 <script>
