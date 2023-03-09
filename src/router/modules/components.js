@@ -17,10 +17,10 @@ const componentsRouter = {
       meta: { title: 'Audio' }
     },
     {
-        path: 'loading',
-        component: () => import('@/views/components-demo/loading.vue'),
-        name: 'LoadingDemo',
-        meta: { title: 'Loading' }
+      path: 'loading',
+      component: () => import('@/views/components-demo/loading.vue'),
+      name: 'LoadingDemo',
+      meta: { title: 'Loading' }
     }
   ]
 }

@@ -7,6 +7,7 @@ function resolve(dir) {
 
 module.exports = defineConfig({
   lintOnSave: false,
+  publicPath:'/ele/',
   devServer: {
     proxy: {
       '/api': {
