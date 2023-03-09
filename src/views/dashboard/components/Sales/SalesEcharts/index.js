@@ -45,7 +45,8 @@ const option = {
   series: [{
      name:"Toys",
      symbol: 'none',
-     data: [820, 932, 901, 934, 1290, 1330, 1320, 300, 600, 111, 323, 987], type: 'line', smooth: true, itemStyle: {
+    data: [820, 380, 901, 934, 1290, 1330, 1320, 600, 600, 511, 323, 987],
+    type: 'line', smooth: true, itemStyle: {
      color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{ offset: 1, color: '#845ED7' }, {
           offset: 0, color: '#6B8AEB'
       }])

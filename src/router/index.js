@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import { getToken } from "@/utils/auth"
 import layout from '@/layout'
+import documetRouter from './modules/document'
+import componentsRouter from './modules/components'
 Vue.use(VueRouter);
 export const constantRoutes = [
   {
@@ -19,25 +21,15 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: 'Dashboard', icon: 'boluo', affix: true }
       }
     ]
   },
+  documetRouter,
+  componentsRouter
 ];
 
 export const asyncRoutes = [
-  {
-    path: '/tab',
-    component: layout,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/tab/index.vue'),
-        name: 'Tab',
-        meta: { title: 'Tab', icon: 'tab' }
-      }
-    ]
-  },
 ]
 
 const router = new VueRouter({

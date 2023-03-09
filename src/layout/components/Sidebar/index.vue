@@ -16,7 +16,6 @@
     </el-scrollbar>
   </div>
 </template>
-
 <script>
 import variables from '@/styles/variables.module.scss'
 import { mapGetters } from 'vuex'
