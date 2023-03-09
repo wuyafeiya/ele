@@ -2,10 +2,7 @@
   <div :class="classObj" class="app-wrapper">
     <Sidebar class="sidebar-container"></Sidebar>
     <div class="main-container">
-      <div>
-        <Nav></Nav>
-        <!--<tags-view></tags-view>-->
-      </div>
+      <Nav></Nav>
       <app-main />
     </div>
   </div>
@@ -42,16 +39,10 @@ export default {
 </script>
 <style lang="scss">
 @import '@/styles/mixin.scss';
-@import '@/styles/variables.module.scss';
-
 .app-wrapper {
   @include clearfix;
   position: relative;
   height: 100%;
   width: 100%;
-  &.mobile.openSidebar {
-    position: fixed;
-    top: 0;
-  }
 }
 </style>

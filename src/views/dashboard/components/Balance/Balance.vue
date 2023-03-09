@@ -32,6 +32,9 @@ export default {
   padding-left: 24px;
   padding-top: 22px;
   box-sizing: border-box;
+  &:hover {
+    box-shadow: 0 0 10px #fff;
+  }
   .B-l {
     span {
       display: block;

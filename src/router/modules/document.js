@@ -6,7 +6,7 @@ const documetRouter = {
   name: 'Document',
   meta: {
     title: 'Document',
-    icon: 'component',
+    icon: 'caomei',
   },
   children: [
   {

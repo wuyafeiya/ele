@@ -49,7 +49,7 @@
       <div class="dot"></div>
     </div>
     <div class="loading">
-      <div class="dot"></div>
+      <div class="dot">1</div>
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
@@ -148,7 +148,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {}
+  }
+}
 </script>
 
 <style lang="scss" scoped>
