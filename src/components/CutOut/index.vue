@@ -12,7 +12,7 @@
         <div style="display: flex; flex-direction: column; align-items: center">
           <div class="avatar" :style="{ background: `url('${imgUrl}'),center` }"></div>
           <div style="margin-top: 100px">
-            <el-button class="Btn">重新选择</el-button>
+            <el-button class="Btn" @click="$refs.input.click()">重新选择</el-button>
             <el-button class="Btn"> 上传图片</el-button>
           </div>
         </div>
@@ -22,6 +22,7 @@
   </div>
 </template>
 <script>
+import { javascript } from 'webpack'
 import UploadDialog from './Dialog.vue'
 export default {
   name: 'CutOut',
