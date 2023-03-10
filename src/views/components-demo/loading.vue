@@ -190,7 +190,7 @@ $pdeg: 360deg / $n;
       animation: moveBlack 2000ms infinite;
     }
     &::after {
-      background: #fff;
+      background: pink;
       top: 100%;
       animation: moveWhite 2000ms infinite;
     }

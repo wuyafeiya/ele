@@ -21,7 +21,7 @@ const componentsRouter = {
       component: () => import('@/views/components-demo/loading.vue'),
       name: 'LoadingDemo',
       meta: { title: 'Loading' }
-    }
+    },
   ]
 }
 export default componentsRouter

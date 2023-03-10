@@ -11,7 +11,8 @@ import '@/icons/index'
 import axios from 'axios'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false;
-Vue.prototype.$Message=message
+Vue.prototype.$Message = message
+Vue.prototype.$EventBus = new Vue()
 Vue.use(ElementUI)
 new Vue({
   router,

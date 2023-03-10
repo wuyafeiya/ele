@@ -4,6 +4,7 @@ import { getToken } from "@/utils/auth"
 import layout from '@/layout'
 import documetRouter from './modules/document'
 import componentsRouter from './modules/components'
+import UploadFile from './modules/Uploadfile'
 Vue.use(VueRouter);
 export const constantRoutes = [
   {
@@ -26,7 +27,9 @@ export const constantRoutes = [
     ]
   },
   documetRouter,
-  componentsRouter
+  componentsRouter,
+  UploadFile
+
 ];
 
 export const asyncRoutes = [

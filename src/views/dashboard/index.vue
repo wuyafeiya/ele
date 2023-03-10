@@ -57,6 +57,7 @@ export default {
   justify-content: space-around;
   align-items: flex-end;
   padding: 20px;
+  background: #242424;
   .title {
     font-size: 48px;
     color: #fff;
