@@ -10,7 +10,7 @@
       </el-col>
       <el-col :span="12">
         <div style="display: flex; flex-direction: column; align-items: center">
-          <div class="avatar" :style="{ background: `url('${imgUrl}'),center` }"></div>
+          <div class="avatar" :style="{ background: `url('${imgUrl}'),no-repeat` }"></div>
           <div style="margin-top: 100px">
             <el-button class="Btn" @click="$refs.input.click()">重新选择</el-button>
             <el-button class="Btn"> 上传图片</el-button>
@@ -22,7 +22,6 @@
   </div>
 </template>
 <script>
-import { javascript } from 'webpack'
 import UploadDialog from './Dialog.vue'
 export default {
   name: 'CutOut',
@@ -42,6 +41,7 @@ export default {
   },
   methods: {
     UploadClick() {
+      this.$refs.input.value = ''
       this.$refs.input.click()
     },
     UploadChange(event) {
@@ -53,7 +53,6 @@ export default {
         that.img = render.result
         that.dialogVisible = true
       })
-      this.$refs.input.value = ''
     },
     handleClose(res) {
       this.imgUrl = res
@@ -65,17 +64,8 @@ export default {
 
 <style lang="scss" scoped>
 .CutOut {
-  background-image: #fff !important;
   padding: 36px 0 0 94px;
   .file {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 460px;
-    height: 662px;
-    border-radius: 36px;
-    border: 1px dashed #000;
     img {
       position: absolute;
       left: 170px;

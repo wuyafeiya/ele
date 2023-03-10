@@ -16,10 +16,10 @@ const Uploadfile = {
       meta: { title: 'Cut-out' }
     },
     {
-      path: "Cut-out1",
-      component: () => import('@/components/CutOut'),
-      name: 'Cut-out',
-      meta: { title: 'Cut-out' }
+      path: "LargeFileUpload",
+      component: () => import('@/components/LargeFileUpload'),
+      name: 'LargeFileUpload',
+      meta: { title: 'LargeFileUpload' }
     }
   ]
 }

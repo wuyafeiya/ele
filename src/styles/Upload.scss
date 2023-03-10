@@ -1,0 +1,11 @@
+.file,
+.LargeFile{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 460px;
+  height: 662px;
+  border-radius: 36px;
+  border: 1px dashed #000;
+}

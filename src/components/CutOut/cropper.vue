@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img ref="imagePreview" :src="img" alt="" />
+    <img ref="imagePreview" :src="img" alt="" :v-model="img" />
   </div>
 </template>
 <script>
@@ -12,6 +12,11 @@ export default {
   mixins: [mixins],
   mounted() {
     this.init()
+  },
+  watch: {
+    img() {
+      this.init()
+    }
   },
   methods: {
     init() {
