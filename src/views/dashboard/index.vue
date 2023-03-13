@@ -14,13 +14,15 @@
         <customer></customer>
       </div>
     </div>
-    <div class="dash-m-r"></div>
+    <div class="dash-m-r">
+      <weather></weather>
+    </div>
   </div>
 </template>
 <script>
-import { Sales, Calendar, Balance, Weekly, Customer } from './components'
+import { Sales, Calendar, Balance, Weekly, Customer, Weather } from './components'
 export default {
-  components: { Balance, Sales, Calendar, Weekly, Customer },
+  components: { Balance, Sales, Calendar, Weekly, Customer, Weather },
   data() {
     return {
       BalanceInfo: [
@@ -79,7 +81,7 @@ export default {
     margin-left: 630px;
   }
   .dash-m-r {
-    width: 307px;
+    width: 357px;
     height: 808px;
     background: #161717;
     border-radius: 32px;

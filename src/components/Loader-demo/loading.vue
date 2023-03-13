@@ -48,105 +48,8 @@
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
-    <div class="loading">
-      <div class="dot">1</div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
-    <div class="loading">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-    </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -157,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 $ballSize: 10px;
-$containerSize: 250px;
+$containerSize: 150px;
 $n: 46;
 $pdeg: 360deg / $n;
 .loading {

@@ -73,7 +73,7 @@ export default {
           const param = { username: this.ruleForm.username, password: this.ruleForm.password }
           await this.$store.dispatch(LOGIN_ACTION, param)
           this.$router.push({ path: '/' }).catch((err) => err)
-          document.body.style.background = '#fff'
+          document.body.style.backgroundColor = '#fff'
         } else {
           return false
         }
@@ -104,6 +104,7 @@ body {
   background-color: $Black;
 }
 #login_background {
+  background-color: $Black;
   text-align: right;
   .el-icon-turn-off:before,
   .el-icon-open:before {

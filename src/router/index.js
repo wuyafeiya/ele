@@ -5,6 +5,7 @@ import layout from '@/layout'
 import documetRouter from './modules/document'
 import componentsRouter from './modules/components'
 import UploadFile from './modules/Uploadfile'
+import CssLayout from './modules/CssLayout'
 Vue.use(VueRouter);
 export const constantRoutes = [
   {
@@ -28,8 +29,8 @@ export const constantRoutes = [
   },
   documetRouter,
   componentsRouter,
-  UploadFile
-
+  UploadFile,
+  CssLayout
 ];
 
 export const asyncRoutes = [

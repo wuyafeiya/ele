@@ -20,6 +20,12 @@ const Uploadfile = {
       component: () => import('@/components/LargeFileUpload'),
       name: 'LargeFileUpload',
       meta: { title: 'LargeFileUpload' }
+    },
+    {
+      path: "DragAndDrop",
+      component: () => import('@/components/dragAndDrop'),
+      name: 'DragAndDrop',
+      meta: { title: 'DragAndDrop' }
     }
   ]
 }

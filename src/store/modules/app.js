@@ -3,7 +3,6 @@ const state = {
     opened: true
   }
 }
-
 const mutations = {
   TOGGLE_SIDEBAR: state => {
     state.sidebar.opened = !state.sidebar.opened

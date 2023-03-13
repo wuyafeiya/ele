@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-dialog title="裁剪图片" :visible="dialogVisible" width="30%" :before-close="handleClose">
-      <cropper :img="img"></cropper>
+    <el-dialog title="裁剪0图片" :visible="dialogVisible" width="30%" :before-close="handleClose" @closed="$refs['cropper'].handleDestroy()">
+      <cropper :img="img" ref="cropper"></cropper>
       <span slot="footer" class="dialog-footer">
         <el-button @click="handleClose">取 消</el-button>
         <el-button type="primary" @click="handleClose">确 定</el-button>

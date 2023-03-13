@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img ref="imagePreview" :src="img" alt="" :v-model="img" />
+    <img ref="imagePreview" :src="img" alt="" />
   </div>
 </template>
 <script>
@@ -13,23 +13,21 @@ export default {
   mounted() {
     this.init()
   },
-  watch: {
-    img() {
-      this.init()
-    }
-  },
   methods: {
     init() {
       this.$refs.imagePreview.addEventListener('load', () => {
-        const croper = new Cropper(this.$refs.imagePreview, {
+        this.croper = new Cropper(this.$refs.imagePreview, {
           aspectRatio: 1 / 1
         })
         this.$refs.imagePreview.addEventListener('cropmove', () => {
-          const imgUrl = croper.getCroppedCanvas().toDataURL()
+          const imgUrl = this.croper.getCroppedCanvas().toDataURL()
           this.$EventBus.$emit('img', imgUrl)
         })
-        croper.crop()
+        this.croper.crop()
       })
+    },
+    handleDestroy() {
+      this.croper.destroy()
     }
   },
   destroyed() {
