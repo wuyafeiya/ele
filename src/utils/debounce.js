@@ -2,6 +2,7 @@
  * 防抖函数
  * 
  */
+
  const debounce = (fn, wait = 50) => {
   let timer 
   return function (...args) {
@@ -12,7 +13,6 @@
     }, wait);
   }
  }
-
 export default debounce
 
 
