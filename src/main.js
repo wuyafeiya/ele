@@ -9,11 +9,13 @@ import './permission'
 import '@/styles/index.scss'
 import '@/icons/index'
 import axios from 'axios'
+import VueCompositionAPI from '@vue/composition-api'
 Vue.prototype.$axios=axios
 Vue.config.productionTip = false;
 Vue.prototype.$Message = message
 Vue.prototype.$EventBus = new Vue()
 Vue.use(ElementUI)
+Vue.use(VueCompositionAPI)
 new Vue({
   router,
   store,
