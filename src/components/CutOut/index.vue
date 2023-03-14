@@ -46,7 +46,6 @@ export default {
     },
     UploadChange(event) {
       const render = new FileReader()
-      console.log(event.target.files[0])
       render.readAsDataURL(event.target.files[0])
       const that = this
       render.addEventListener('load', function () {

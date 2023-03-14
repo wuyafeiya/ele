@@ -1,6 +1,5 @@
 // 导入脚本
 // import script for encrypted computing
-console.log(123)
 self.importScripts("/public/spark-md5.min.js");
 // 生成文件 hash
 // create file hash

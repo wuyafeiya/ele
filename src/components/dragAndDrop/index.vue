@@ -28,7 +28,6 @@ export default {
       this.$refs.input.click()
     },
     init() {
-      console.log(this.$refs.Drop)
       this.$refs.Drop.addEventListener('dragover', (event) => {
         event.preventDefault()
       })

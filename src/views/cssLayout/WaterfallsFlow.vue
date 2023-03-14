@@ -35,7 +35,6 @@ export default {
           item.style.top = 60 + 'px'
           item.style.left = (this.itemWidth + this.gap) * i + 'px'
           arr.push(height)
-          console.log(arr)
         } else {
           let minIndex = this.getMinIndex(arr)
           item.style.top = arr[minIndex] + this.gap + 60 + 'px'

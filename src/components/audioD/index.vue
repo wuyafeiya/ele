@@ -38,7 +38,6 @@ export default {
         return
       }
       // 初始化
-      console.log(audioEle)
       const audCtx = new AudioContext()
       const source = audCtx.createMediaElementSource(audioEle)
       this.analyser = audCtx.createAnalyser()

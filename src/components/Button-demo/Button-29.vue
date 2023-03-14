@@ -1,7 +1,7 @@
 <template>
-  <button-29 class="button-29">
+  <button class="button-29">
     <span class="button-29-content">Download </span>
-  </button-29>
+  </button>
 </template>
 
 <script>

@@ -174,9 +174,7 @@ export default {
       if (!this.container.file) return
       this.status = Status.uploading
       const fileChunkList = this.createFileChunk(this.container.file)
-      console.log(fileChunkList)
       this.container.hash = await this.calculateHash(fileChunkList)
-      console.log(this.container.hash)
 
       const { shouldUpload, uploadedList } = await this.verifyUpload(this.container.file.name, this.container.hash)
       if (!shouldUpload) {
