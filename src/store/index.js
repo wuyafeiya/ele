@@ -8,6 +8,8 @@ import user from '@/store/modules/user'
 import permission from '@/store/modules/permission'
 import app from '@/store/modules/app'
 import tagsView from '@/store/modules/tagsView'
+
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({

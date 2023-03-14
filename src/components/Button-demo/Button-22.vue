@@ -1,0 +1,26 @@
+<template><button class="btn-22">cut</button></template>
+
+<script>
+export default {}
+</script>
+
+<style scoped>
+.btn-22 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(13, 13, 13, 0.3);
+  padding: 0.4em 1.2em;
+  border-style: dashed;
+  border-radius: 0.25em;
+  border-width: 2px;
+  border-color: rgba(13, 13, 13, 0.75);
+  transition: 0.2s ease;
+}
+
+.btn-22:hover {
+  background-color: rgb(255, 255, 255);
+  color: #0d0d0d;
+  border-color: #0d0d0d;
+}
+</style>

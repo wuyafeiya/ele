@@ -6,7 +6,7 @@ import { importAll } from '@/utils/mixin'
 import Publice from '@/components/Publice/index.vue'
 export default {
   mounted() {
-    const r = require.context('@/components/Loader-demo', false, /\.vue$/)
+    const r = require.context('@/components/Button-demo', false, /\.vue$/)
     const { cache, componentList } = importAll(r)
     this.cache = cache
     this.componentList = componentList

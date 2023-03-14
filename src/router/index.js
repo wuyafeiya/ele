@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import { getToken } from "@/utils/auth"
 import layout from '@/layout'
 import documetRouter from './modules/document'
 import componentsRouter from './modules/components'

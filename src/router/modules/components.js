@@ -22,6 +22,12 @@ const componentsRouter = {
       name: 'LoadingDemo',
       meta: { title: 'Loading' }
     },
+    {
+      path: 'Button',
+      component: () => import('@/views/Button/index.vue'),
+      name: 'ButtonDemo',
+      meta: { title: 'Button' }
+    },
   ]
 }
 export default componentsRouter
