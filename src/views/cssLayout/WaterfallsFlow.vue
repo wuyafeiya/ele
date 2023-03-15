@@ -61,7 +61,10 @@ export default {
       let documentHeight = document.documentElement.scrollHeight
       let clientHeight = window.innerHeight
       if (documentHeight - scrollTop < 1.5 * clientHeight) {
-        this.number = 100
+        if (this.number > 1000) {
+          return alert('满了')
+        }
+        this.number += 30
         this.waterFall()
       }
     },
@@ -74,6 +77,7 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/styles/mixin.scss';
+$Number: v-bind(number);
 #box {
   @include clearfix;
   overflow: hidden;
@@ -89,7 +93,7 @@ export default {
   margin-bottom: 15px;
   width: 206px;
   position: absolute;
-  @for $i from 1 through 100 {
+  @for $i from 1 through 1000 {
     &:nth-child(#{$i}) {
       background-color: rgba(random(255), random(255), random(255), 0.8);
       height: random(300) + random(300) + px;

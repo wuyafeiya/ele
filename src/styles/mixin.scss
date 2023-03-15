@@ -34,6 +34,10 @@
 }
 
 @mixin flex {
+
+  .flex-grow,
+  .flex-direction,
+  .flex-basis,
   .Spindle-item,
   .Spindle,
   .SideShaft {
@@ -46,6 +50,11 @@
       box-shadow: 0 0 8px #fff;
       border-radius: 10px;
       margin-bottom: 15px;
+      @for $i from 1 through 9{
+        .el-col:nth-child(#{$i}){
+          background: rgb(random(255), random(255), random(255));
+        }
+      }
       .el-col {
         text-align: center;
         line-height: 70px;

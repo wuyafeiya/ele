@@ -2,7 +2,7 @@ import Layout from '@/layout'
 const VueuseRouter = {
   path: '/Vueuse',
   component: Layout,
-  redirect: 'noRedirect',
+  redirect: '/Vueuse/State/createGlobalState',
   name: 'Vueuse',
   meta: {
     title: 'VueuseRouter',
@@ -10,16 +10,25 @@ const VueuseRouter = {
   },
   children: [
     {
-      path: 'Mouse',
-      component: () => import('@/views/Vueuse'),
-      name: 'mouseDemo',
-      meta: { title: 'Mouse' }
-    },
-    {
-      path: 'Mouse-out',
-      component: () => import('@/views/Vueuse'),
-      name: 'mouseDemo',
-      meta: { title: 'Mouse-out' }
+      path: 'State',
+      component: () => import('@/views/Vueuse/State/index'),
+      name: 'StateDemo',
+      meta: { title: 'State(状态)' },
+      redirect: '',
+      children: [
+        {
+          path: 'createGlobalState',
+          component: () => import('@/views/Vueuse/State/createGlobalState'),
+          name: 'createGlobalState',
+          meta: { title: 'createGlobalState' }
+        },
+        {
+          path: 'createInjectionState',
+          component: () => import('@/views/Vueuse/State/createInjectionState'),
+          name: 'createInjectionState',
+          meta: { title: 'createInjectionState' }
+        }
+      ]
     },
   ]
 }
