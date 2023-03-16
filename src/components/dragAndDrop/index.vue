@@ -32,9 +32,11 @@ export default {
         event.preventDefault()
       })
       this.$refs.Drop.addEventListener('dragenter', (event) => {
+        event.preventDefault()
         event.target.classList.add('dragover')
       })
       this.$refs.Drop.addEventListener('dragleave', (event) => {
+        event.preventDefault()
         event.target.classList.remove('dragover')
       })
       this.$refs.Drop.addEventListener('drop', (event) => {

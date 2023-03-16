@@ -28,6 +28,12 @@ const componentsRouter = {
       name: 'ButtonDemo',
       meta: { title: 'Button' }
     },
+    {
+      path: 'Input',
+      component: () => import('@/views/Input/index.vue'),
+      name: 'InputDemo',
+      meta: { title: 'Input' }
+    },
   ]
 }
 export default componentsRouter

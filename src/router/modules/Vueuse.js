@@ -5,7 +5,7 @@ const VueuseRouter = {
   redirect: '/Vueuse/State/createGlobalState',
   name: 'Vueuse',
   meta: {
-    title: 'VueuseRouter',
+    title: 'Vueuse',
     icon: 'binggun'
   },
   children: [
