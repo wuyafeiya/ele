@@ -6,6 +6,7 @@ import componentsRouter from './modules/components'
 import UploadFile from './modules/Uploadfile'
 import CssLayout from './modules/CssLayout'
 import VueuseRouter from './modules/Vueuse'
+import CanvasRouter from './modules/Canvas'
 Vue.use(VueRouter);
 export const constantRoutes = [
   {
@@ -32,6 +33,7 @@ export const constantRoutes = [
   UploadFile,
   CssLayout,
   VueuseRouter,
+  CanvasRouter
 ];
 
 export const asyncRoutes = [

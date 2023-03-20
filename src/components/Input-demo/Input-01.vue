@@ -3,10 +3,10 @@
     <input required="" type="text" class="input" />
     <span class="bar"></span>
     <label class="label">
-      <span class="label-char" style="--index: 0">N</span>
-      <span class="label-char" style="--index: 1">a</span>
-      <span class="label-char" style="--index: 2">m</span>
-      <span class="label-char" style="--index: 3">e</span>
+      <span class="label-char-01" style="--index: 0">N</span>
+      <span class="label-char-01" style="--index: 1">a</span>
+      <span class="label-char-01" style="--index: 2">m</span>
+      <span class="label-char-01" style="--index: 3">e</span>
     </label>
   </div>
 </template>
@@ -45,13 +45,13 @@ export default {}
   display: flex;
 }
 
-.wave-group-01 .label-char {
+.wave-group-01 .label-char-01 {
   transition: 0.2s ease all;
   transition-delay: calc(var(--index) * 0.05s);
 }
 
-.wave-group-01 .input:focus ~ label .label-char,
-.wave-group-01 .input:valid ~ label .label-char {
+.wave-group-01 .input:focus ~ label .label-char-01,
+.wave-group-01 .input:valid ~ label .label-char-01 {
   transform: translateY(-20px);
   font-size: 14px;
   color: #5264ae;

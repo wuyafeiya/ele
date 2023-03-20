@@ -27,6 +27,12 @@ const VueuseRouter = {
           component: () => import('@/views/Vueuse/State/createInjectionState'),
           name: 'createInjectionState',
           meta: { title: 'createInjectionState' }
+        },
+        {
+          path: 'useBase64',
+          component: () => import('@/views/Vueuse/State/useBase64'),
+          name: 'useBase64',
+          meta: { title: 'useBase64' }
         }
       ]
     },
